@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input this blank"
+        android:textSize="35sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="130dp"
+        android:textColor="#000000" />
+    <EditText
+        android:layout_width="200sp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:hint="text..."
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:id="@+id/sendString"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Send"
+        android:textSize="20sp"
+        android:id="@+id/sendButton"
+        android:layout_above="@+id/receiveString"
+        android:layout_toRightOf="@+id/sendString" />
+
+    <EditText
+        android:id="@+id/receiveString"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sendString"
+        android:layout_alignRight="@+id/sendButton"
+        android:layout_below="@+id/sendString"
+        android:layout_weight="0.38"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="top"
+        android:hint="message..."
+        android:inputType="textMultiLine" />
+
+</LinearLayout>
